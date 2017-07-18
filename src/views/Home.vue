@@ -240,13 +240,7 @@
 				width: 230px;
 			}
 			.content-container {
-				// background: #f1f2f7;
 				flex:1;
-				// position: absolute;
-				// right: 0px;
-				// top: 0px;
-				// bottom: 0px;
-				// left: 230px;
 				overflow-y: scroll;
 				padding: 20px;
 				.breadcrumb-container {

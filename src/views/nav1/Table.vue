@@ -3,9 +3,13 @@
 		<!--工具条-->
 		<el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
 			<el-form :inline="true" :model="filters">
-				<el-form-item>
+				<el-form-item label="姓名">
 					<el-input v-model="filters.name" placeholder="姓名"></el-input>
 				</el-form-item>
+				<el-form-item label="年龄">
+					<el-input v-model="filters.age" placeholder="年龄"></el-input>
+				</el-form-item>
+				
 				<el-form-item>
 					<el-button type="primary" v-on:click="getUsers">查询</el-button>
 				</el-form-item>
@@ -113,7 +117,8 @@
 		data() {
 			return {
 				filters: {
-					name: ''
+					name: '',
+					age:''
 				},
 				users: [],
 				total: 0,
@@ -126,6 +131,9 @@
 				editFormRules: {
 					name: [
 						{ required: true, message: '请输入姓名', trigger: 'blur' }
+					],
+					age:[
+						{ required: true, message: '请输入年龄', trigger: 'blur' }
 					]
 				},
 				//编辑界面数据
